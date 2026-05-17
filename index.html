@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog Post — Certificação Web</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=DM+Sans:wght@400;500&display=swap"
+      rel="stylesheet"/>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <span class="nav-logo">Postagem Blog</span>
+        <span class="nav-tag">devstart</span>
+      </nav>
+    </header>
+
+    <main>
+      <section class="form-section" aria-labelledby="form-heading">
+        <h1 id="form-heading">Criar nova postagem</h1>
+        <p class="subtitle">Compartilhe suas ideias com o mundo.</p>
+
+        <form id="post-form" novalidate>
+          <div class="field-group">
+            <label for="titulo">Título da postagem</label>
+            <input
+              type="text"
+              id="titulo"
+              name="titulo"
+              placeholder="Ex: Minha jornada no desenvolvimento web..."
+              required
+              aria-required="true"
+              autocomplete="off"
+            />
+          </div>
+
+          <div class="field-group">
+            <label for="conteudo">Conteúdo</label>
+            <textarea
+              id="conteudo"
+              name="conteudo"
+              placeholder="Escreva aqui o conteúdo do seu post..."
+              rows="6"
+              required
+              aria-required="true"
+            ></textarea>
+          </div>
+
+          <button type="submit" id="btn-submit" aria-label="Publicar o post">
+            <span class="btn-text">Publicar</span>
+            <span class="btn-icon">→</span>
+          </button>
+        </form>
+        <br><hr><br>
+        <section
+        class="output-section"
+        id="output-section"
+        aria-live="polite"
+        aria-labelledby="post-renderizado"
+        >
+        <article id="post-card" class="post-card hidden">
+          <div class="post-card-header">
+            <span class="post-badge">✓ Postado com sucesso</span>
+          </div>
+          <h2 id="renderizador-titulo"></h2>
+          <p id="renderizador-conteudo"></p>
+          <footer class="post-card-footer">
+            <span>UsuárioID: <strong id="renderizador-userid"></strong></span>
+            <span>PostID: <strong id="renderizador-id"></strong></span>
+          </footer>
+        </article>
+
+        <div id="estado-inicial" class="estado-inicial">
+          <span class="placeholder-icon">📝</span>
+          <p>Seu post aparecerá aqui depois de publicado.</p>
+        </div>
+      </section>
+      </section>
+
+    </main>
+
+    <footer class="site-footer">
+      <p>@ Devstart 2026 - Todos os direitos reservados</p>
+    </footer>
+
+    <script src="javascript.js"></script>
+  </body>
+</html>
