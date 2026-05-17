@@ -56,7 +56,6 @@ form.addEventListener('submit', function (e) {
       alert('Ocorreu um erro ao publicar o post. Tente novamente.');
     })
     .finally(function () {
-      // Restaura o botão
       btnSubmit.disabled = false;
       btnSubmit.querySelector('.btn-text').textContent = 'Publicar';
     });
